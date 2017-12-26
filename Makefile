@@ -40,15 +40,15 @@ instructions:
 	@echo "Make options: contest, testAI, clean, tar"
 
 contest: $(CONTESTOBJECTS)
-	g++ -o contest $(CONTESTOBJECTS)
+	g++ -o contest.exe $(CONTESTOBJECTS)
 	@echo "Contest binary is in 'contest'. Run as './contest'"
 
 testAI: $(TESTEROBJECTS) 
-	g++ -o testAI $(TESTEROBJECTS)
+	g++ -o testAI.exe $(TESTEROBJECTS)
 	@echo "Tester is in 'testAI'. Run as './testAI'"
 
 clean:
-	rm -f contest $(CONTESTOBJECTS) $(TESTEROBJECTS)
+	rm -f contest.exe testAI.exe $(CONTESTOBJECTS) $(TESTEROBJECTS)
 
 tar:
 	g++ -c -Wall -O2 CleanPlayerV2.cpp
