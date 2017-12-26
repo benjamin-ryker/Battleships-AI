@@ -29,7 +29,6 @@
 #include "CleanPlayerV2.h"
 #include "GamblerPlayerV2.h"
 #include "LearningGambler.h"
-#include "HitAll.h"
 
 PlayerV2* getPlayer( int playerId, int boardSize );
 void playMatch( int player1Id, int player2Id, bool showMoves );
@@ -42,7 +41,7 @@ float secondsPerMove = 1;
 int boardSize;	// BoardSize
 int totalGames = 0;
 int totalCountedMoves = 0;
-const int NumPlayers = 4;
+const int NumPlayers = 3;
 
 int wins[NumPlayers][NumPlayers];
 int playerIds[NumPlayers];
@@ -56,7 +55,6 @@ string playerNames[NumPlayers] = {
 //    "Clean Player",
     "myPlayer",
     "Learning Gambler",
-    "HitAll"
 };
 
 
@@ -281,7 +279,6 @@ PlayerV2* getPlayer( int playerId, int boardSize ) {
 //	case 2: return new CleanPlayerV2( boardSize );
     case 1: return new myPlayer(boardSize);
     case 2: return new LearningGambler(boardSize);
-    case 3: return new HitAll(boardSize);
     }
 }
 

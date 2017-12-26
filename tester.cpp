@@ -30,7 +30,6 @@
 
 // Change to include your player directly below
 #include "myPlayer.h"
-#include "HitAll.h"
 
 
 PlayerV2* getPlayer( int playerId, int boardSize );
@@ -45,7 +44,7 @@ float secondsPerMove = 1;
 int boardSize;	// BoardSize
 int totalGames = 0;
 int totalCountedMoves = 0;
-const int NumPlayers = 6;
+const int NumPlayers = 5;
 
 int wins[NumPlayers][NumPlayers];
 int playerIds[NumPlayers];
@@ -60,7 +59,6 @@ string playerNames[NumPlayers] = {
     "Learning Gambler",
     // Change to your player's name below
     "My Player",
-    "HitAll"
 };
 
 int main() {
@@ -229,7 +227,6 @@ PlayerV2* getPlayer( int playerId, int boardSize ) {
 	case 3: return new LearningGambler( boardSize );
 	// Change for your player's AI below
 	case 4: return new myPlayer( boardSize );
-    case 5: return new HitAll(boardSize);
     }
 }
 

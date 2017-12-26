@@ -13,10 +13,10 @@ CXX = g++
 # Add your player on the line after GamblerPlayer 
 ################################################
 CONTESTOBJECTS = AIContest.o BoardV3.o Message.o PlayerV2.o conio.o contest.o \
-	DumbPlayerV2.o CleanPlayerV2.o GamblerPlayerV2.o LearningGambler.o SemiSmartPlayerV2.o myPlayer.o HitAll.o
+	DumbPlayerV2.o CleanPlayerV2.o GamblerPlayerV2.o LearningGambler.o SemiSmartPlayerV2.o myPlayer.o
 
 TESTEROBJECTS = AIContest.o BoardV3.o Message.o PlayerV2.o conio.o tester.o \
-	DumbPlayerV2.o CleanPlayerV2.o GamblerPlayerV2.o LearningGambler.o SemiSmartPlayerV2.o myPlayer.o HitAll.o
+	DumbPlayerV2.o CleanPlayerV2.o GamblerPlayerV2.o LearningGambler.o SemiSmartPlayerV2.o myPlayer.o
 
 HOST_NAME := $(shell hostname)
 HOST_OK := no
@@ -75,9 +75,6 @@ AIContest.cpp: AIContest.h Message.h defines.h
 # Players here
 DumbPlayerV2.o: DumbPlayerV2.cpp Message.cpp
 DumbPlayerV2.cpp: DumbPlayerV2.h defines.h PlayerV2.h conio.cpp
-
-HitAll.o: HitAll.cpp Message.cpp
-HitAll.cpp: HitAll.h defines.h PlayerV2.h conio.cpp
 
 myPlayer.o: myPlayer.cpp Message.cpp
 myPlayer.cpp: myPlayer.h defines.h PlayerV2.h conio.cpp
